@@ -1,6 +1,13 @@
 export const DEFAULT_APP_SETTINGS = {
   skin: "STANDARD",
   backgroundImg: "",
+  message: "introduce el valor correcto",
+  errorMessage: "el valor es incorrecto",
+  placeholder: "Custom placeholder...",
+  autoWidth: false,
+  width: 800,
+  fontSize: 20,
+  fontColor: "#000",
 };
 
 export const THEMES = {

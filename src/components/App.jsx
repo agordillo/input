@@ -104,10 +104,6 @@ export default function App() {
     return _appSettings;
   }
 
-  const solvePuzzle = (solution) => {
-    checkResult(solutionStr);
-  };
-
   function checkResult(_solution) {
     escapp.checkNextPuzzle(_solution, {}, (success, erState) => {
       Utils.log("Check solution Escapp response", success, erState);
@@ -139,7 +135,9 @@ export default function App() {
         appSettings !== null && typeof appSettings.skin === "string" ? appSettings.skin.toLowerCase() : ""
       }`}
     >
-      <div className={`main-background ${fail ? "fail" : ""}`}>{!loading && <MainScreen config={appSettings} />}</div>
+      <div className={`main-background ${fail ? "fail" : ""}`}>
+        {!loading && <MainScreen config={appSettings} sendInput={checkResult} />}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,11 @@
 export let LOCALES = {
-  es: {},
-  en: {},
-  it: {},
+  en: {
+    "i.send": "Send",
+  },
+  es: {
+    "i.send": "Enviar",
+  },
+  sr: {
+    "i.send": "Send",
+  },
 };
