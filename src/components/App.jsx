@@ -109,6 +109,8 @@ export default function App() {
       Utils.log("Check solution Escapp response", success, erState);
       if (success) {
         try {
+          setFail(false);
+
           setTimeout(() => {
             submitPuzzleSolution(_solution);
           }, 2000);

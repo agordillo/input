@@ -2,7 +2,7 @@
 
 export let ESCAPP_APP_SETTINGS = {
   //Settings that can be specified by the authors
-  skin: "STANDARD", //skin can be "STANDARD", "RETRO" or "FUTURISTIC".
+  skin: "STANDARD", //skin can be "STANDARD" or "FUTURISTIC".
   // backgroundImg: "NONE", //background can be "NONE" or a URL.
   message: "introduce el valor correcto",
   errorMessage: "el valor es incorrecto",
