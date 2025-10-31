@@ -2,15 +2,17 @@
 
 export let ESCAPP_APP_SETTINGS = {
   //Settings that can be specified by the authors
-  skin: "STANDARD", //skin can be "STANDARD" or "FUTURISTIC".
-  // backgroundImg: "NONE", //background can be "NONE" or a URL.
+  backgroundImg: "", //background can be "NONE" or a URL.
   message: "introduce el valor correcto",
   errorMessage: "el valor es incorrecto",
   placeholder: "Custom placeholder...",
   autoWidth: false,
-  width: 800,
+  width: "30",
   fontSize: 20,
-  fontColor: "#000",
+  fontColor: "#ffffffff",
+  xposition: "RIGHT", //LEFT, CENTER, RIGHT
+  yposition: "BOTTOM", //CENTER, TOP, BOTTOM
+  opacity: 1, // from 0 to 1
 
   //Settings that will be automatically specified by the Escapp server
   locale: "es",

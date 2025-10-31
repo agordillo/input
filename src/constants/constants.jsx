@@ -5,30 +5,23 @@ export const DEFAULT_APP_SETTINGS = {
   errorMessage: "el valor es incorrecto",
   placeholder: "Custom placeholder...",
   autoWidth: false,
-  width: 800,
+  width: 50,
   fontSize: 20,
   fontColor: "#000",
+  xposition: "CENTER",
+  yposition: "CENTER",
+  opacity: 1.0,
 };
 
-export const THEMES = {
-  STANDARD: "STANDARD",
-  RETRO: "RETRO",
-  FUTURISTIC: "FUTURISTIC",
+export const XPOSITION = {
+  LEFT: "LEFT",
+  CENTER: "CENTER",
+  RIGHT: "RIGHT",
 };
-
-export const THEME_ASSETS = {
-  [THEMES.STANDARD]: {
-    backgroundImg: "images/basic_bg.png",
-    buttonAudio: "sounds/button.wav",
-  },
-  [THEMES.RETRO]: {
-    backgroundImg: "images/retro_bg.png",
-    torchAudio: "sounds/torch.wav",
-  },
-  [THEMES.FUTURISTIC]: {
-    backgroundImg: "images/futuristic_bg.png",
-    buttonAudio: "sounds/button.wav",
-  },
+export const YPOSITION = {
+  TOP: "TOP",
+  CENTER: "CENTER",
+  BOTTOM: "BOTTOM",
 };
 
 export const ESCAPP_CLIENT_SETTINGS = {

@@ -6,136 +6,82 @@ div#MainScreen {
   background-repeat: no-repeat;
   background-position: center;
 
+  div.content {
+    background-color: #2a2a52;
+    padding: 0% 2%;
+    border-radius: 15px;
+    transition: color 0.3s ease;
+    margin: 20px;
+
+    // 🔹 cuando el input dentro de este contenedor está en foco,
+    // el texto del <p> se ilumina igual que el input
+    &:has(input:focus) p.info {
+      color: #fff;
+    }
+  }
+
   .input-container {
     display: flex;
     gap: 15px;
 
     input {
-      flex: 0 0 auto;
-      background-color: #dbdbdb;
-      border-radius: 8px;
-      border: 1px solid transparent;
-      padding: 0.6em 1.2em;
-      font-size: 1em;
-      font-weight: 500;
-      font-family: inherit;
-      cursor: pointer;
-      transition: border-color 0.25s;
+      appearance: auto;
+      background-color: transparent;
+      border: 2px solid rgb(101, 102, 131);
+      border-radius: 20px;
+      box-sizing: border-box;
+      color: rgb(101, 102, 131);
+      caret-color: #fff;
+      font-size: 18px;
+      font-weight: 100;
+
+      padding: 0 15px;
+      text-align: center;
+      outline: none;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: #fff;
+        color: #fff;
+      }
     }
+
     button {
-      background-color: #dbdbdb;
+      background-color: transparent;
+      border: 2px solid rgb(101, 102, 131);
+      border-radius: 20px;
+      box-sizing: border-box;
+      color: rgb(101, 102, 131);
+      font-weight: 100;
+      padding: 5px 25px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #fff;
+        color: #fff;
+      }
     }
   }
+
   p.error {
     visibility: hidden;
-    color: red;
+    color: #ff0000ba;
   }
 }
+
 .fail {
   p.error {
     visibility: visible !important;
-  }
-}
-
-.futuristic {
-  .input {
-    width: 100%;
-    height: 60px;
-    padding: 12px;
-    font-size: 18px;
-    font-family: "Courier New", monospace;
-    color: #000;
-    background-color: #fff;
-    border: 4px solid #000;
-    border-radius: 0;
-    outline: none;
-    transition: all 0.3s ease;
-    box-shadow: 8px 8px 0 #000;
-  }
-
-  .input:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0 #000;
-  }
-
-  .input:focus {
-    background-color: #000;
-
-    border-color: #ffffff;
-  }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-
-  .input:focus::after {
-    content: "|";
-    position: absolute;
-    right: 10px;
-    animation: blink 0.7s step-end infinite;
-  }
-
-  .input {
-    width: 100%;
-    height: 60px;
-    padding: 12px;
-    font-size: 18px;
-    font-family: "Courier New", monospace;
-    color: #000;
-    background-color: #fff;
-    border: 4px solid #000;
-    border-radius: 0;
-    outline: none;
-    transition: all 0.3s ease;
-    box-shadow: 8px 8px 0 #000;
-  }
-
-  .input:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0 #000;
-  }
-
-  .input:focus {
-    background-color: #010101;
-    border-color: #d6d9dd;
-  }
-
-  @keyframes shake {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-5px) rotate(-5deg);
-    }
-    50% {
-      transform: translateX(5px) rotate(5deg);
-    }
-    75% {
-      transform: translateX(-5px) rotate(-5deg);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .input:focus {
-    animation: shake 0.5s ease-in-out;
-  }
-
-  .input:not(:placeholder-shown) {
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 0px 0px 0 #000;
   }
 }
