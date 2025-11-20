@@ -78,6 +78,7 @@ export default function MainScreen({ config, sendInput }) {
         className="content"
         style={{
           width: config.autoWidth ? "auto" : `${config.width}%`,
+          minWidth: "375px",
         }}
       >
         <p
